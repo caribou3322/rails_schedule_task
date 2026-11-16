@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ScheduleApp
   class Application < Rails::Application
+    config.time_zone = "Tokyo"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
 
@@ -23,5 +24,6 @@ module ScheduleApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.default_locale = :ja
   end
 end

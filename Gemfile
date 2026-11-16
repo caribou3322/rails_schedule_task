@@ -55,3 +55,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "json", "< 3.0"
+
+gem "rails-i18n"
