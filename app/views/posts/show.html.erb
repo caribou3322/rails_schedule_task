@@ -1,0 +1,29 @@
+<h1>予定詳細</h1>
+
+<table border="1">
+  <tr>
+    <th>タイトル</th>
+    <td><%= @post.title %></td>
+  </tr>
+  <tr>
+    <th>開始日</th>
+    <td><%= @post.start_date.strftime("%Y/%m/%d") %></td>
+  </tr>
+  <tr>
+    <th>終了日</th>
+    <td><%= @post.end_date.strftime("%Y/%m/%d") %></td>
+  </tr>
+  <tr>
+    <th>終日</th>
+    <td><%= @post.all_day ? "○" : "" %></td>
+  </tr>
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= simple_format(@post.body) %></td>
+  </tr>
+</table>
+
+<div>
+  <%= link_to "一覧に戻る", posts_path %> |
+  <%= link_to "編集", edit_post_path(@post) %>
+</div>
